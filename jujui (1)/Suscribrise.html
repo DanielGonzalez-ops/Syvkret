@@ -19,8 +19,70 @@
             alert("Falta el Nro de Tarjeta");
             $(".txtTarjeta").focus();
           }
-        })
-      
+          else
+          {
+            alert("Datos ingresados correctamente");
+            $(".txtTarjeta").val('');
+            $(".txtMes").val('');
+            $(".txtCVV").val('');
+            
+          }
+        });
+        $(".btnSub").click(function()
+        {
+          let mes = $(".txtMes").val();
+          if(!mes)
+          {
+            alert("Falta la fecha de vencimiento");
+            $(".txtMes").focus();
+          }
+          else
+          {
+            alert("Datos ingresados correctamente");
+            $(".txtTarjeta").val('');
+            $(".txtMes").val('');
+            $(".txtCVV").val('');
+            
+          }
+        });
+        $(".btnSub").click(function()
+        {
+          let cvv = $(".txtCVV").val();
+          if(!cvv)
+          {
+            alert("Falta el CVV");
+            $(".txtCVV").focus();
+          }
+          else
+          {
+            alert("Datos ingresados correctamente");
+            $(".txtTarjeta").val('');
+            $(".txtMes").val('');
+            $(".txtCVV").val('');
+            
+          }
+        });
+        let numero = '1234567890';
+            $(".txtTarjeta").keypress(function(e)
+              {
+                var character = String.fromCharCode(e.which);
+                if(numero.indexOf(character) < 0)
+                    return false;
+              });
+        let Numero = '1234567890';
+          $(".txtMes").keypress(function(e)
+            {
+              var character = String.fromCharCode(e.which);
+              if(numero.indexOf(character) < 0)
+                return false;
+            });
+        let nro = '1234567890';
+          $(".txtCVV").keypress(function(e)
+            {
+              var character = String.fromCharCode(e.which);
+              if(numero.indexOf(character) < 0)
+                return false;
+            });
       })
     </script>
     <title>Document</title>
